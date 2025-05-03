@@ -21,8 +21,9 @@ function Input() {
                 {({ values,
                     handleChange,
                     handleBlur,
-                    handleSubmit,
-                    isSubmitting, }) => (
+                    // handleSubmit,
+                    // isSubmitting, 
+                }) => (
                     <Form>
                         <div className='w-full space-y-6  flex flex-col  justify-center pb-[50px]'>
 

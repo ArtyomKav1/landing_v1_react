@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <div className='overflow-x-hidden bg-black'>
+      <div className='overflow-x-hidden bg-black '>
         <Header />
         <Main />
         <InputWrapper />
