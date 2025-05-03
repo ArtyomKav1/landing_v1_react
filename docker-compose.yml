@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  react-app:
+    build: .  # Собирает образ из Dockerfile
+    ports:
+      - "80:80"  # Открываем порт 80
+    restart: always  # Автоперезапуск при падении
