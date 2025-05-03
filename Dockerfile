@@ -1,5 +1,5 @@
 # Используем лёгкий Nginx-образ
-FROM nginx:alpine
+FROM nginx
 
 # Копируем билд React в Nginx
 COPY build/ /usr/share/nginx/html
