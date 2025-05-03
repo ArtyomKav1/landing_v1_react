@@ -1,11 +1,12 @@
-# Используем лёгкий Nginx-образ
+# 1. Используем Node для сборки
+FROM node as builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+# 2. Копируем build в Nginx
 FROM nginx
-
-# Копируем билд React в Nginx
-COPY build/ /usr/share/nginx/html
-
-# (Опционально) Настраиваем Nginx, если нужно
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Открываем порт 80
+COPY --from=builder /app/build /usr/share/nginx/html
 EXPOSE 80
