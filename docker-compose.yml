@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  web:
+    build: 
+      context: .     # Указывает на папку с Dockerfile
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"      # Порт хоста:порт контейнера
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
