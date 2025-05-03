@@ -1,5 +1,5 @@
 # Шаг 1: Сборка приложения
-FROM node:18 as builder
+FROM node as builder
 
 # Создаем рабочую директорию
 WORKDIR /usr/src/app
@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Шаг 2: Запуск Nginx
-FROM nginx:alpine
+FROM nginx
 
 # Копируем собранное приложение из builder
 COPY --from=builder /usr/src/app/build /usr/share/nginx/html
