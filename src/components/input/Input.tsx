@@ -5,7 +5,7 @@ import { initialValues, validationSchema } from './valid';
 
 function Input() {
 
-    async function postData(data) {
+    async function postData(data: { email: string, name: string, Post: string, agree: boolean, }) {
         try {
             const response = await fetch("http://localhost:3000/v1", {
                 method: 'POST',
@@ -23,7 +23,7 @@ function Input() {
             console.log('Success:', result);
             return result;
         } catch (error) {
-            console.error('Error:', error.message);
+            // console.error('Error:', error.message);
             throw error;  
         }
     }
