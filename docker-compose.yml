@@ -5,7 +5,11 @@ services:
       context: .     # Указывает на папку с Dockerfile
       dockerfile: Dockerfile
     ports:
-      - "8080:80"      # Порт хоста:порт контейнера
+      - "3000:3000"      # Порт хоста:порт контейнера
     restart: unless-stopped
     environment:
       - NODE_ENV=production
+
+
+
+      

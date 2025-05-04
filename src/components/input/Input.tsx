@@ -7,7 +7,7 @@ function Input() {
 
     async function postData(data: { email: string, name: string, Post: string, agree: boolean, }) {
         try {
-            const response = await fetch("http://localhost:3000/v1", {
+            const response = await fetch("http://212.23.211.54:3000/v1", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
