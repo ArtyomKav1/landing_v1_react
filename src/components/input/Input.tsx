@@ -5,6 +5,28 @@ import { initialValues, validationSchema } from './valid';
 
 function Input() {
 
+    async function postData(data) {
+        try {
+            const response = await fetch("http://localhost:3000/v1", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data), 
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const result = await response.json();  
+            console.log('Success:', result);
+            return result;
+        } catch (error) {
+            console.error('Error:', error.message);
+            throw error;  
+        }
+    }
 
     return (
         <>
@@ -14,6 +36,7 @@ function Input() {
                 validationSchema={validationSchema}
                 onSubmit={(values, { setSubmitting }) => {
                     console.log(values)
+                    postData(values)
                     setSubmitting(false);
                     // props.setConfirm(true)
                 }}
