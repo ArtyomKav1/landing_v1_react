@@ -1,6 +1,7 @@
 version: '3.8'
 services:
   web:
+    image: react_v1-web:v2 
     build: 
       context: .     # Указывает на папку с Dockerfile
       dockerfile: Dockerfile
