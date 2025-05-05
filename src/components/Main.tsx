@@ -9,6 +9,7 @@ import item_3_img_1 from "../assets/item_3/1.svg"
 import item_3_img_2 from "../assets/item_3/2.svg"
 import item_3_img_V from "../assets/item_3/creen_video_3.png"
 
+
 const data = [
     {
         text1_main: "70%",
@@ -45,6 +46,7 @@ const data = [
     }
 ]
 function Main() {
+
     return (
         <>
             <div className="overflow-x-hidden">
