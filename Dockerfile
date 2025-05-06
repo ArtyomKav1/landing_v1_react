@@ -7,9 +7,12 @@ RUN npm run build
 
 
 FROM nginx:alpine
+
+RUN apk add --no-cache apache2-utils
+RUN htpasswd -c -b /etc/nginx/.htpasswd admin admin
 COPY --from=builder /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY .htpasswd /etc/nginx/.htpasswd
+
 
 EXPOSE 80
 
