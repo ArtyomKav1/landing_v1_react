@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-// import HeaderImg from "../assets/Header.svg"
+
 
 function Header() {
   const videoRef = useRef<HTMLVideoElement>(null);

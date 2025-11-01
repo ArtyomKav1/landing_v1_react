@@ -35,24 +35,19 @@ function Input(props: { setPopupLoading: (arg: boolean) => void }) {
           console.log(values);
           postData(values);
           setSubmitting(false);
-          resetForm()
+          resetForm();
         }}
       >
-        {({ values, handleChange, handleBlur }) => (
+        {() => (
           <Form>
             <div className="flex w-full flex-col justify-center space-y-4 2xl:space-y-6">
               <ItemInput name={'name'} placeholder="ФИО" />
               <ItemInput name={'email'} placeholder="email" />
               <ItemInput name={'Post'} placeholder="Должность" />
-              <ItemCheckBox
-                name={'agree'}
-                value={values.agree}
-                handleChange={handleChange}
-                handleBlur={handleBlur}
-              />
+              <ItemCheckBox name={'agree'} />
               <button
                 type="submit"
-                className="rounded-[8px] bg-[#FFBE3F] px-[40px] py-[22.5px] text-[18px] leading-[26px] text-[#0D0628] 2xl:text-[27px] 2xl:leading-[39px]"
+                className="cursor-pointer rounded-[8px] bg-[#FFBE3F] px-[40px] py-[22.5px] text-[18px] leading-[26px] text-[#0D0628] transition-all duration-300 hover:-translate-y-1 2xl:text-[27px] 2xl:leading-[39px]"
               >
                 Отправить
               </button>
@@ -81,7 +76,7 @@ function Input(props: { setPopupLoading: (arg: boolean) => void }) {
             <a
               href="#"
               onClick={() => setPopup(false)}
-              className="mx-auto w-[30%] rounded-[8px] bg-[#FFBE3F] p-4 max-md:p-2 text-center text-[20px] text-black"
+              className="mx-auto w-[30%] rounded-[8px] bg-[#FFBE3F] p-4 text-center text-[20px] text-black max-md:p-2"
             >
               назад
             </a>
