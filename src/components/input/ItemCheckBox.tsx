@@ -23,7 +23,12 @@ export const ItemCheckBox = (props: ItemCheckBoxProps) => {
         <div className="ml-2 cursor-pointer text-[16px] text-white xl:text-[18px] 2xl:text-[27px]">
           <p>
             Я согласен c{' '}
-            <a href="#" className="underline">
+            <a
+              href="https://ya.ru/?npr=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline "
+            >
               условиями обработки персональных данных
             </a>
           </p>

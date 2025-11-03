@@ -61,15 +61,15 @@ function MainItem(props: MainItem) {
   return (
     <>
       <section className="flex flex-col items-center p-[20px] lg:gap-[120px]">
-        <div className="flex h-[700px] w-full flex-col md:w-[2400px] md:flex-row">
-          <div className="relative h-[658px] flex-1">
+        <div className="flex h-[700px] w-full flex-col max-[1600px]:h-[500px] max-md:h-[700px] md:w-[2400px] md:flex-row">
+          <div className="relative h-[658px] flex-1 max-[1600px]:h-[400px] max-xl:h-[300px]">
             <img
-              className="absolute right-[80px] bottom-[120px] z-10 h-[248px] w-[372px] md:right-[0px] md:h-[480px] md:w-[720px] lg:bottom-[-120px] lg:h-[800px] lg:w-[1200px]"
+              className="absolute right-0 z-10 h-[800px] w-[1200px] max-[1600px]:h-[600px] max-[1600px]:w-[900px] max-xl:h-[500px] max-xl:w-[750px] max-md:-top-10 max-md:right-[30%] max-md:h-[240px] max-md:w-[360px]"
               src={props.img1}
-              alt=""
+              alt="img1"
             />
 
-            <div className="absolute top-[200px] right-[-85px] z-10 flex w-[432px] flex-col gap-[8px] md:top-[100px] md:right-[-120px] lg:right-[0px] 2xl:gap-[12px]">
+            <div className="absolute top-20 -right-15 z-10 flex w-[432px] flex-col gap-[8px] max-lg:-right-0 max-lg:w-[200px] max-md:top-30 max-md:right-[40%] 2xl:gap-[12px]">
               <p className="text-[72px] leading-[72px] text-[#51B0E8] 2xl:text-[108px] 2xl:leading-[108px]">
                 {props.text1_main}
               </p>
@@ -81,13 +81,13 @@ function MainItem(props: MainItem) {
             </div>
           </div>
 
-          <div className="relative h-[658px] flex-1">
+          <div className="max-xl:h-[300px relative h-[658px] flex-1 max-[1600px]:h-[400px]">
             <img
-              className="absolute top-[-40px] right-[-100px] z-10 h-[248px] w-[372px] md:top-0 md:left-[-80px] md:h-[480px] md:w-[720px] lg:h-[800px] lg:w-[1200px]"
+              className="absolute left-0 z-10 h-[800px] w-[1200px] max-[1600px]:h-[600px] max-[1600px]:w-[900px] max-xl:h-[500px] max-xl:w-[750px] max-lg:-left-20 max-md:-top-30 max-md:left-[40%] max-md:h-[240px] max-md:w-[360px]"
               src={props.img2}
-              alt=""
+              alt="img2"
             />
-            <div className="leading-[24px absolute bottom-[20px] left-[0px] z-10 flex w-[332px] flex-col gap-[16px] rounded-[8px] border border-[#FFBE3F] p-[28px] text-[16px] text-white md:w-[360px] xl:text-[18px] xl:leading-[26px] 2xl:w-[582px] 2xl:gap-[24px] 2xl:p-[40px] 2xl:text-[27px] 2xl:leading-[39px]">
+            <div className="absolute -bottom-25 left-0 z-10 flex w-[332px] flex-col gap-[16px] rounded-[8px] border border-[#FFBE3F] p-[28px] text-[16px] leading-[24px] text-white max-lg:-bottom-0 max-md:bottom-0 max-md:left-[50%] max-md:translate-[-50%] max-md:p-[20px] md:w-[360px] xl:text-[18px] xl:leading-[26px] 2xl:w-[582px] 2xl:gap-[24px] 2xl:p-[40px] 2xl:text-[27px] 2xl:leading-[39px]">
               <p>
                 {props.text2_1} <span className="text-[#FFBE3F]">{props.text2_2}</span>
               </p>
@@ -96,7 +96,7 @@ function MainItem(props: MainItem) {
           </div>
         </div>
 
-        <div className="relative md:w-[696px] lg:w-[936px] 2xl:w-[1192px]">
+        <div className="relative max-md:w-[332px] md:w-[696px] lg:w-[936px] 2xl:w-[1192px]">
           <video
             ref={videoRef}
             src={props.video_link}

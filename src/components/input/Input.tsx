@@ -84,14 +84,24 @@ function Input(props: { setPopupLoading: (arg: boolean) => void }) {
 
           <div className="flex max-w-[472px] flex-col gap-4 text-white">
             <div className="flex gap-4">
-              <div className="flex cursor-pointer items-center justify-center gap-4 rounded-[8px] bg-[#292929]/40 p-4 transition-all duration-300 hover:-translate-y-1 hover:bg-[#FFBE3F]">
+              <a
+                href="https://ya.ru/?npr=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex cursor-pointer items-center justify-center gap-4 rounded-[8px] bg-[#292929]/40 p-4 transition-all duration-300 hover:-translate-y-1 hover:bg-[#FFBE3F]"
+              >
                 <img src={tg} alt="tg" />
                 Поделиться
-              </div>
+              </a>
 
-              <div className="flex cursor-pointer items-center justify-center gap-4 rounded-[8px] bg-[#292929]/40 p-4 transition-all duration-300 hover:-translate-y-1 hover:bg-[#FFBE3F]">
+              <a
+                href="https://ya.ru/?npr=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex cursor-pointer items-center justify-center gap-4 rounded-[8px] bg-[#292929]/40 p-4 transition-all duration-300 hover:-translate-y-1 hover:bg-[#FFBE3F]"
+              >
                 <img src={vk} alt="vk" />
-              </div>
+              </a>
             </div>
 
             <div className="flex cursor-pointer items-center justify-center gap-4 rounded-[8px] bg-[#292929]/40 p-4 transition-all duration-300 hover:-translate-y-1 hover:bg-[#FFBE3F]">

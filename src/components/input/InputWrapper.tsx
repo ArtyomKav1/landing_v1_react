@@ -25,9 +25,14 @@ function InputWrapper() {
           </div>
           <Input setPopupLoading={setPopupLoading} />
         </div>
-        <h1 className="text-center text-[16px] leading-[24px] text-white/50 underline hover:no-underline 2xl:text-[27px] 2xl:leading-[39px]">
+        <a
+          href="https://ya.ru/?npr=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-center text-[16px] leading-[24px] text-white/50 underline hover:no-underline 2xl:text-[27px] 2xl:leading-[39px]"
+        >
           Статья про причины выгорания у юристов
-        </h1>
+        </a>
 
         {popupLoading && (
           <div className="absolute inset-0 z-50 flex h-full w-full flex-col items-center justify-between bg-black/80 py-[50px]">

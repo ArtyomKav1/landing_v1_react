@@ -5,7 +5,7 @@ import Main from './components/Main';
 function App() {
   return (
     <>
-      <div className="overflow-x-hidden bg-black">
+      <div className="overflow-x-hidden ">
         <Header />
         <Main />
         <InputWrapper />
