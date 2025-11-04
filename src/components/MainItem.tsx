@@ -69,11 +69,11 @@ function MainItem(props: MainItem) {
               alt="img1"
             />
 
-            <div className="absolute top-20 -right-15 z-10 flex w-[432px] flex-col gap-[8px] max-lg:-right-0 max-lg:w-[200px] max-md:top-30 max-md:right-[40%] 2xl:gap-[12px]">
+            <div className="absolute top-20 -right-15 z-10 flex w-[432px] flex-col gap-[8px] max-lg:-right-0 max-lg:w-[264px] max-md:top-30 max-md:right-[20%] 2xl:gap-[12px]">
               <p className="text-[72px] leading-[72px] text-[#51B0E8] 2xl:text-[108px] 2xl:leading-[108px]">
                 {props.text1_main}
               </p>
-              <p className="t2xl:text-[27px] leading-[26px] text-white xl:text-[18px] 2xl:leading-[39px]">
+              <p className="2xl:text-[27px] leading-[26px] text-white text-[18px] 2xl:leading-[39px]">
                 {props.text1_sub}
                 <br />
                 <span className="text-[#51B0E8]">{props.text1_sub_col}</span>
